@@ -1,0 +1,14 @@
+tags = ["#fun", "#python", "#fun", "#code", "#python"]
+unique_tags = []
+frequencies = {}
+
+for tag in tags:
+    frequencies[tag] = frequencies.get(tag, 0) + 1
+    if tag not in unique_tags:
+        unique_tags.append(tag)
+
+most_repeated = max(frequencies, key=frequencies.get)
+
+print(f"Most Repeated: {most_repeated}")
+print(f"Unique Hashtags: {unique_tags}")
+print(f"Frequencies: {frequencies}")
