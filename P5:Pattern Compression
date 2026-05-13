@@ -1,0 +1,16 @@
+data = [1, 1, 1, 2, 2, 3, 3, 3]
+compressed = []
+
+if data:
+    current_val = data[0]
+    count = 0
+    for val in data:
+        if val == current_val:
+            count += 1
+        else:
+            compressed.append((current_val, count))
+            current_val = val
+            count = 1
+    compressed.append((current_val, count))
+
+print(f"Output: {compressed}")
