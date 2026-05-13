@@ -1,0 +1,9 @@
+expenses = [1200, 850, 1500, 950]
+
+total = sum(expenses)
+avg_share = total / len(expenses)
+highest_paid = max(expenses)
+
+print(f"Total Expense: {total}")
+print(f"Average Share (Each should pay): {avg_share}")
+print(f"Highest Amount Paid: {highest_paid}")
