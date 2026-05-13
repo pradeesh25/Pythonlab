@@ -1,0 +1,11 @@
+durations = [12, 4, 8, 15, 3, 20]
+
+total_time = sum(durations)
+longest = max(durations)
+average = total_time / len(durations)
+short_videos = [d for d in durations if d < 5]
+
+print(f"Total Watch Time: {total_time} mins")
+print(f"Longest Video: {longest} mins")
+print(f"Average Duration: {average:.2f} mins")
+print(f"Videos shorter than 5 mins: {short_videos}")
