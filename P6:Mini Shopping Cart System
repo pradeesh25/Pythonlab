@@ -1,0 +1,32 @@
+cart = []
+
+def shopping_cart():
+    while True:
+        print("\n1.Add 2.Remove 3.Search 4.Bill 5.Show Duplicates 6.Exit")
+        choice = input("Select operation: ")
+        
+        if choice == '1':
+            item = input("Enter item name: ")
+            price = float(input("Enter price: "))
+            cart.append([item, price])
+        elif choice == '2':
+            item_name = input("Item to remove: ")
+            for item in cart:
+                if item[0] == item_name:
+                    cart.remove(item)
+                    break
+        elif choice == '3':
+            query = input("Search item: ")
+            found = [item for item in cart if item[0] == query]
+            print("Found:" if found else "Not found", found)
+        elif choice == '4':
+            total = sum(item[1] for item in cart)
+            print(f"Total Bill: {total}")
+        elif choice == '5':
+            names = [item[0] for item in cart]
+            duplicates = set([x for x in names if names.count(x) > 1])
+            print("Duplicate items:", duplicates)
+        elif choice == '6':
+            break
+
+shopping_cart()
