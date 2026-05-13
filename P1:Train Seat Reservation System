@@ -1,0 +1,25 @@
+seats = [0] * 20
+
+while True:
+    print("\n1.Book Seat\n2.Cancel Seat\n3.Show Seats\n4.Booking Percentage\n5.Exit")
+    choice = int(input("Enter choice: "))
+
+    if choice == 1:
+        s_num = int(input("Enter seat number (1-20): ")) - 1
+        if seats[s_num] == 0:
+            seats[s_num] = 1
+            print("Seat booked successfully!")
+        else:
+            print("Seat already occupied.")
+    elif choice == 2:
+        s_num = int(input("Enter seat number (1-20): ")) - 1
+        seats[s_num] = 0
+        print("Booking cancelled.")
+    elif choice == 3:
+        print("Seats:", seats)
+    elif choice == 4:
+        booked = seats.count(1)
+        percent = (booked / 20) * 100
+        print(f"Booking Percentage: {percent}%")
+    elif choice == 5:
+        break
