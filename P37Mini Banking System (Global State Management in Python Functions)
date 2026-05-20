@@ -1,0 +1,22 @@
+# Topic: Mini Banking System (Global State Management in Python Functions)
+balance = 1000.0  
+
+def deposit(amount):
+    global balance
+    balance += amount
+    print(f"Deposited {amount}. Current Balance: {balance}")
+
+def withdraw(amount):
+    global balance
+    if amount <= balance:
+        balance -= amount
+        print(f"Withdrew {amount}. Current Balance: {balance}")
+    else:
+        print("Insufficient balance!")
+
+def check_balance():
+    print(f"Your Balance is: {balance}")
+
+deposit(500)
+withdraw(200)
+check_balance()
