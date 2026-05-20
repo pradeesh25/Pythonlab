@@ -1,0 +1,20 @@
+# Topic: HackerRank Style Problem (Custom Matrix/Array Sorting without Built-ins)
+arr = [10, 20, 30, 40, 50]
+
+maximum = arr[0]
+for num in arr:
+    if num > maximum:
+        maximum = num
+
+minimum = arr[0]
+for num in arr:
+    if num < minimum:
+        minimum = num
+
+reversed_arr = []
+for i in range(len(arr) - 1, -1, -1):
+    reversed_arr.append(arr[i])
+
+print("Maximum:", maximum)
+print("Minimum:", minimum)
+print("Reversed List:", reversed_arr)
