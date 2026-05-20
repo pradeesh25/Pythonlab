@@ -1,0 +1,19 @@
+# Topic: Student Result Analyzer (Statistical Tracking and Data Filtering)
+def analyze_results():
+    marks = []
+    for i in range(5):
+        m = float(input(f"Enter marks for student {i+1}: "))
+        marks.append(m)
+        
+    avg = sum(marks) / len(marks)
+    highest = max(marks)
+    lowest = min(marks)
+    
+    passed = [m for m in marks if m > 40]
+    
+    print(f"\nAverage: {avg}")
+    print(f"Highest: {highest}")
+    print(f"Lowest: {lowest}")
+    print(f"Number of passed students: {len(passed)}")
+
+analyze_results()
