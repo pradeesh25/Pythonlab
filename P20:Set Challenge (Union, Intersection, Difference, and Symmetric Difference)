@@ -1,0 +1,8 @@
+# Topic: Set Challenge (Union, Intersection, Difference, and Symmetric Difference)
+A = {1, 2, 3, 4, 5}
+B = {4, 5, 6, 7}
+
+print("Union:", A.union(B))                          # Or A | B
+print("Intersection:", A.intersection(B))            # Or A & B
+print("Difference (A - B):", A.difference(B))        # Or A - B
+print("Symmetric Difference:", A.symmetric_difference(B))  # Or A ^ B
