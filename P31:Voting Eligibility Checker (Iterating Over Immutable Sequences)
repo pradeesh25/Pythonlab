@@ -1,0 +1,11 @@
+# Topic: Voting Eligibility Checker (Iterating Over Immutable Sequences)
+ages = (15, 21, 18, 16, 45, 12)
+
+def check_voting_eligibility(age_tuple):
+    eligible = []
+    for age in age_tuple:
+        if age >= 18:
+            eligible.append(age)
+    return eligible
+
+print("Ages eligible to vote:", check_voting_eligibility(ages))
