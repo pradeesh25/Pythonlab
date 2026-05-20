@@ -1,0 +1,12 @@
+# Topic: Dictionary Student Record (Key-Value Updates and Extraction)
+student = {
+    "name": "Arjun",
+    "roll": 23,
+    "branch": "Computer Science",
+    "marks": 88
+}
+
+student["marks"] = 94
+
+print("Keys:", list(student.keys()))
+print("Values:", list(student.values()))
