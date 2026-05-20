@@ -1,0 +1,17 @@
+# Topic: Employee Salary Dictionary (Data Mutation and Lookup Operations)
+employees = {"John": 50000, "Emma": 65000}
+
+def add_employee(name, salary):
+    employees[name] = salary
+
+def update_salary(name, new_salary):
+    if name in employees:
+        employees[name] = new_salary
+    else:
+        print("Employee not found.")
+
+def search_employee(name):
+    return employees.get(name, "Not Found")
+
+update_salary("John", 55000)
+print("John's Salary:", search_employee("John"))
