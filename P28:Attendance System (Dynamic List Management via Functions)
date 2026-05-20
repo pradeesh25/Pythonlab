@@ -1,0 +1,19 @@
+# Topic: Attendance System (Dynamic List Management via Functions)
+attendance = ["Alice", "Bob", "Charlie"]
+
+def add_student(name):
+    attendance.append(name)
+    print(f"{name} added.")
+
+def remove_student(name):
+    if name in attendance:
+        attendance.remove(name)
+        print(f"{name} removed.")
+    else:
+        print(f"{name} not found.")
+
+def display_students():
+    print("Present Students:", attendance)
+
+add_student("David")
+display_students()
