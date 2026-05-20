@@ -1,0 +1,9 @@
+# Topic: Unique Number Counter (Type Casting from List to Set)
+numbers = []
+print("Enter 10 numbers:")
+for i in range(10):
+    num = int(input(f"Enter number {i+1}: "))
+    numbers.append(num)
+
+unique_numbers = set(numbers)
+print("Count of unique numbers:", len(unique_numbers))
