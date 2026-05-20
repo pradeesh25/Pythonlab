@@ -1,0 +1,11 @@
+# Topic: Mini Shopping Cart (Parallel Lists and Math Utilities)
+items = ["Notebook", "Pen", "Bag", "Bottle"]
+prices = [45, 10, 250, 85]
+
+total_bill = sum(prices)
+highest_price = max(prices)
+lowest_price = min(prices)
+
+print(f"Total Bill: {total_bill}")
+print(f"Highest Price: {highest_price}")
+print(f"Lowest Price: {lowest_price}")
