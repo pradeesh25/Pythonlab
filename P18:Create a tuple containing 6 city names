@@ -1,0 +1,12 @@
+# Create a tuple containing 6 city names
+cities = ("Mumbai", "Delhi", "Bengaluru", "New York", "London", "Tokyo")
+
+print("First city:", cities[0])
+print("Last city:", cities[-1])
+print("Total elements:", len(cities))
+
+# Check whether "Delhi" exists
+if "Delhi" in cities:
+    print("'Delhi' exists in the tuple.")
+else:
+    print("'Delhi' does not exist.")
