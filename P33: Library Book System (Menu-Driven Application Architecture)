@@ -1,0 +1,37 @@
+# Topic: Library Book System (Menu-Driven Application Architecture)
+library = []
+
+def add_book():
+    book = input("Enter book title to add: ")
+    library.append(book)
+    print(f"'{book}' added successfully.")
+
+def remove_book():
+    book = input("Enter book title to remove: ")
+    if book in library:
+        library.remove(book)
+        print(f"'{book}' removed successfully.")
+    else:
+        print("Book not found.")
+
+def search_book():
+    book = input("Enter book title to search: ")
+    if book in library:
+        print(f"'{book}' is available.")
+    else:
+        print("Book not found.")
+
+def display_books():
+    print("Books in library:", library)
+
+while True:
+    print("\n--- Library Menu ---")
+    print("1. Add Book\n2. Remove Book\n3. Search Book\n4. Display Books\n5. Exit")
+    choice = input("Enter choice (1-5): ")
+    
+    if choice == '1': add_book()
+    elif choice == '2': remove_book()
+    elif choice == '3': search_book()
+    elif choice == '4': display_books()
+    elif choice == '5': break
+    else: print("Invalid choice.")
