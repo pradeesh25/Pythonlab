@@ -1,0 +1,24 @@
+# Python Exception Handling Using Try-Except-Else-Finally
+try:
+    # Taking input from the user
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+    
+    # Performing division
+    result = num1 / num2
+
+except ValueError:
+    # Handles cases where input cannot be converted to a float
+    print("Error: Invalid input! Please enter numeric values.")
+
+except ZeroDivisionError:
+    # Handles cases where the second number is 0
+    print("Error: Division by zero is not allowed.")
+
+else:
+    # Runs ONLY if no exceptions were raised in the try block
+    print(f"Result of division: {result}")
+
+finally:
+    # Always runs, regardless of whether an exception occurred or not
+    print("Program execution completed.")
